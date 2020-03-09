@@ -211,11 +211,11 @@ class DeviceScreen extends StatelessWidget {
               switch (snapshot.data) {
                 case BluetoothDeviceState.connected:
                   onPressed = () => device.disconnect();
-                  text = 'DISCONNECT';
+                  text = 'Disconnect';
                   break;
                 case BluetoothDeviceState.disconnected:
                   onPressed = () => device.connect();
-                  text = 'CONNECT';
+                  text = 'Connect';
                   break;
                 default:
                   onPressed = null;
