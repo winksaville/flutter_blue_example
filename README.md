@@ -1,16 +1,8 @@
 # flutter_blue_example
 
-Demonstrates how to use the flutter_blue plugin.
+Ported from [flutter_blue/example](https://github.com/pauldemarco/flutter_blue/tree/master/example) so
+that it works outside of the flutter_blue repo.  To do that I edited pubsec.yaml
+to change flutter_blue from being in dev_dependencies and local to being a normal depencency
+and also added .flutter-plugins-dependencies to .gitignore.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+See the first few commits to this repository for details.
