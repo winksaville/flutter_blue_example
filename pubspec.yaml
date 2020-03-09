@@ -9,12 +9,11 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_blue:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  flutter_blue:
-    path: ../
 
 flutter:
   uses-material-design: true
