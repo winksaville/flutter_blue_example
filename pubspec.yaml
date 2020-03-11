@@ -11,6 +11,12 @@ dependencies:
 
   flutter_blue:
 
+  gatt_service_numbers:
+    version: "^0.1.0"
+    #git:
+    #  url: git://github.com/winksaville/gatt_service_numbers_x.git
+    path: ../gatt_service_numbers
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

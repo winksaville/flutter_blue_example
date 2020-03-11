@@ -81,6 +81,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  gatt_service_numbers:
+    dependency: "direct main"
+    description:
+      path: "../gatt_service_numbers"
+      relative: true
+    source: path
+    version: "0.1.0"
   image:
     dependency: transitive
     description:

@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_blue/flutter_blue.dart';
+import 'package:gatt_service_numbers/gatt_service_numbers.dart';
 
 class ScanResultTile extends StatelessWidget {
   const ScanResultTile({Key key, this.result, this.onTap}) : super(key: key);
@@ -123,20 +124,23 @@ class ScanResultTile extends StatelessWidget {
 class ServiceTile extends StatelessWidget {
   final BluetoothService service;
   final List<CharacteristicTile> characteristicTiles;
-
+  final serviceNumbers = const GattServiceNumbers();
   const ServiceTile({Key key, this.service, this.characteristicTiles})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     if (characteristicTiles.length > 0) {
+      String sn = service.uuid.toString().toUpperCase().substring(4, 8);
+      String snOrName = serviceNumbers.getName(sn) ?? '0x$sn';
+      print('snOrName=$snOrName');
       return ExpansionTile(
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text('Service'),
-            Text('0x${service.uuid.toString().toUpperCase().substring(4, 8)}',
+            Text('$snOrName',
                 style: Theme.of(context)
                     .textTheme
                     .body1
